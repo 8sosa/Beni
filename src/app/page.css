@@ -1,105 +1,299 @@
+/* Base styles */
 .homeHero {
     background-color: #8bb6bc;
+    /* Desktop height; for mobile, let content define height */
     height: 80vh;
-}
-.homeHeroText {
+  }
+  
+  .homeHeroText {
+    /* On desktop, use generous spacing */
     width: 70%;
     padding: 4rem;
     margin-left: 4rem;
-}
-.homeHeroText h1{
+  }
+  
+  .homeHeroText h1 {
+    /* The Tailwind classes handle responsive sizes, override only if needed */
     font-size: 5rem;
     font-weight: 800;
     letter-spacing: -5px;
-}
-.homeHeroText p{
-    font-size: 1rem;
-    font-weight: 600;
-}
-.homeHeroBtn {
+  }
+  
+  .homeHeroBtn {
     background-color: red;
     color: #fff;
-}
-.homeAbout {
+  }
+  
+  /* About Section */
+  .homeAbout {
     background-color: #f9f5f3;
     height: 80vh;
     padding: 10rem;
-}
-.homeAboutText {
+  }
+  
+  .homeAboutText {
     color: black;
     width: 50%;
     padding: 5rem;
-}
-.homeAboutText h2 {
+  }
+  
+  .homeAboutText h2 {
     font-size: 3rem;
     font-weight: 500;
     padding-top: 2rem;
-}
-.homeAboutText p {
-    padding: 2rem 0rem;
-}
-.homeAboutBtn {
+  }
+  
+  .homeAboutText p {
+    padding: 2rem 0;
+  }
+  
+  .homeAboutText span {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  .homeAboutBtn {
     border: 2px solid #000;
     border-radius: 5px;
-    padding: .8rem 3rem;
+    padding: 0.8rem 3rem;
     background-color: transparent;
     color: #000;
-}
-.homeAboutImg {
-    width: 50%;
-}
-.homeAboutImg Image {
-    width: 100%;
-    height: auto;
-}
-.service {
+  }
+  
+  /* Services */
+  .service {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-}
-.serviceIcon {
+  }
+  
+  .serviceIcon {
     color: red;
     font-size: 4rem;
     font-weight: 300;
-}
-.service h3 {
+  }
+  
+  .service h3 {
     font-size: 2.2rem;
     color: #000;
     font-weight: 400;
     text-align: left;
-}
-.service p {
+  }
+  
+  .service p {
     text-align: left;
     font-size: 1.1rem;
     color: #414141;
-}
-.service span {
+  }
+  
+  .service span {
     font-size: 1rem;
     font-weight: 700;
     color: #000;
     text-align: left;
-}
-.partner {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: flex-start;
+  }
+  
+  /* Testimonials */
+  .testimonials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .testimonialsHeader {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #000;
+  }
+  
+  .testimonialIcon {
+    color: #000;
+    font-size: 3rem;
+    align-self: center;
+  }
+  
+  .testimonialIconred {
+    color: red;
+  }
+  
+  .testimonialsText {
+    font-size: 1.7rem;
+    font-weight: 200;
+    color: #000;
+  }
+  
+  .testimonialsText1 {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #000;
+  }
+  
+  .testimonialsText2 {
+    font-size: 0.9rem;
+    font-weight: 200;
+    color: #646464;
+  }
+  
+  .testi {
+    width: 100%;
+    gap: 10rem;
+    justify-content: center;
+  }
+  
+  /* Who We Are Section */
+  .wwa {
+    padding: 10rem;
+    height: 100vh;
+  }
+  
+  .wwaText {
+    background-color: #f9f5f3;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  .wwaText h2 {
+    font-size: 3rem;
+    font-weight: 500;
+    color: #000;
+  }
+  
+  .wwaText p {
+    width: 80%;
+  }
+  
+  .wwaText span {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  .wwaBtn {
+    border: 1px solid transparent;
+    background-color: transparent;
+    color: #000;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  /* Partners */
+  .partners {
+    padding: 10rem 0;
+  }
+  
+  .partner {
     border: 1px solid #414141;
     border-radius: 5px;
-    padding: 1rem 3rem;
-}
-.partner-logo {
+    padding: 1.5rem 4rem;
+    /* Using aspect-ratio ensures consistent sizing */
+    aspect-ratio: 2 / 0.8;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 120px;      /* Ensure a consistent width for the logo container */
-    height: 40px;      /* Match the Next.js Image height if you want uniform blocks */
+  }
+  
+  .partner span {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #b6b6b7;
+  }
+  
+  .partner-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
     transition: transform 0.3s ease;
-}
-.partner-logo:hover {
+  }
+  
+  .partner-logo:hover {
     transform: scale(1.05);
-}
-.partner-logo img {
+  }
+  
+  .partner-logo img {
     filter: grayscale(100%);
     transition: filter 0.3s ease;
-}
-.partner-logo:hover img {
-    filter: grayscale(0%);
-}
+  }
   
+  .partner-logo:hover img {
+    filter: grayscale(0%);
+  }
+  
+  /* Responsive Overrides */
+  @media (max-width: 768px) {
+    .homeHero {
+      height: auto;
+      padding: 2rem 1rem;
+    }
+    .homeHeroText {
+      width: 100%;
+      padding: 2rem;
+      margin-left: 0;
+      text-align: center;
+    }
+    .homeHeroText h1 {
+      font-size: 2.5rem;
+      letter-spacing: normal;
+    }
+    .homeAbout {
+      height: auto;
+      padding: 4rem 1rem;
+    }
+    .homeAboutText,
+    .homeAboutImg {
+      width: 100%;
+      padding: 1rem 2rem;
+    }
+    .homeAboutText h2, .wwaText h2  {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+    .homeAboutText p {
+        padding: 1rem 0;
+    }
+    .wwaImage {
+        width: 100%;
+        padding: 0rem;
+    }
+    .wwa {
+      padding: 4rem 1rem;
+      height: auto;
+    }
+    .wwaText {
+      width: 100%;
+      padding: 1.5rem;
+      text-align: left;
+      margin-top: 0rem;
+    }
+    .hideMobile {
+        display: none;
+    }
+    .partner {
+        padding: .5rem 1rem;
+    }
+    .partner span {
+        font-size: 1rem;
+    }
+    .partnersDiv {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+  }  
