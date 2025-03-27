@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
+// import Link from "next/link";
 import "./page.css";
 import { LuGem, LuClipboardList } from "react-icons/lu";
 import { TbTargetArrow } from "react-icons/tb";
@@ -42,7 +42,7 @@ export default function HomePage() {
         <div className="homeAboutText md:w-1/2 md:pr-8 mb-8 md:mb-0">
           <span>---- About Me</span>
           <h2 className="text-3xl font-bold mb-4">
-            I'm the conversion copywriter for you
+            I&apos;m the conversion copywriter for you
           </h2>
           <p className="text-gray-600 mb-4">
             View the range of our services and projects that we perform
