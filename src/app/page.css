@@ -1,0 +1,105 @@
+.homeHero {
+    background-color: #8bb6bc;
+    height: 80vh;
+}
+.homeHeroText {
+    width: 70%;
+    padding: 4rem;
+    margin-left: 4rem;
+}
+.homeHeroText h1{
+    font-size: 5rem;
+    font-weight: 800;
+    letter-spacing: -5px;
+}
+.homeHeroText p{
+    font-size: 1rem;
+    font-weight: 600;
+}
+.homeHeroBtn {
+    background-color: red;
+    color: #fff;
+}
+.homeAbout {
+    background-color: #f9f5f3;
+    height: 80vh;
+    padding: 10rem;
+}
+.homeAboutText {
+    color: black;
+    width: 50%;
+    padding: 5rem;
+}
+.homeAboutText h2 {
+    font-size: 3rem;
+    font-weight: 500;
+    padding-top: 2rem;
+}
+.homeAboutText p {
+    padding: 2rem 0rem;
+}
+.homeAboutBtn {
+    border: 2px solid #000;
+    border-radius: 5px;
+    padding: .8rem 3rem;
+    background-color: transparent;
+    color: #000;
+}
+.homeAboutImg {
+    width: 50%;
+}
+.homeAboutImg Image {
+    width: 100%;
+    height: auto;
+}
+.service {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.serviceIcon {
+    color: red;
+    font-size: 4rem;
+    font-weight: 300;
+}
+.service h3 {
+    font-size: 2.2rem;
+    color: #000;
+    font-weight: 400;
+    text-align: left;
+}
+.service p {
+    text-align: left;
+    font-size: 1.1rem;
+    color: #414141;
+}
+.service span {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #000;
+    text-align: left;
+}
+.partner {
+    border: 1px solid #414141;
+    border-radius: 5px;
+    padding: 1rem 3rem;
+}
+.partner-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;      /* Ensure a consistent width for the logo container */
+    height: 40px;      /* Match the Next.js Image height if you want uniform blocks */
+    transition: transform 0.3s ease;
+}
+.partner-logo:hover {
+    transform: scale(1.05);
+}
+.partner-logo img {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+.partner-logo:hover img {
+    filter: grayscale(0%);
+}
+  
