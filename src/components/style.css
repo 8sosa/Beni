@@ -1,7 +1,7 @@
 /* Header Styles */
 .header {
-    background-color: #8bb6bc;
-    color: #fff;
+    color: #000000;
+    padding: 1rem 0rem;
   }
   
   /* Footer Styles */
@@ -35,6 +35,14 @@
   /* Button style for newsletter subscribe */
   .subBtn {
     border: 2px solid #2a2a2f;
+  }
+  .navLink {
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 800;
+  }
+  .navLink:hover, .navLinkActive {
+    color: #ffd3bd;
   }
   
   /* Media Queries for Responsive Adjustments */
