@@ -65,7 +65,7 @@ export default function Header() {
             <HiOutlineX />
           </button>
         </div>
-        <nav className="flex flex-col p-4 space-y-4 text-center items-end title">
+        <nav className="flex flex-col p-4 space-y-4 text-center items-end title" onClick={() => setMenuOpen(false)}>
           <NavLink href="/" className="navLink">
             Home
           </NavLink>
