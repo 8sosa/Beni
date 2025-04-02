@@ -21,9 +21,11 @@ export default function HomePage() {
             <br />
             copywriter.
           </h1>
-          <button className="homeHeroBtn px-6 py-3 bg-black text-white font-medium rounded-md hover:bg-gray-800 transition-colors">
-            Get In Touch
-          </button>
+            <a href="/contact">
+              <button className="homeHeroBtn px-6 py-3 bg-black text-white font-medium rounded-md hover:bg-gray-800 transition-colors">
+                Get In Touch
+              </button>
+            </a>
         </div>
 
         {/* Right Image */}
@@ -52,9 +54,11 @@ export default function HomePage() {
             View the range of our services and projects that we perform internationally
             with huge love and care.
           </p>
-          <button className="homeAboutBtn px-6 py-3 bg-black text-white font-medium rounded-md hover:bg-gray-800 transition-colors">
-            About Me
-          </button>
+          <a href="/about">
+            <button className="homeAboutBtn px-6 py-3 bg-black text-white font-medium rounded-md hover:bg-gray-800 transition-colors">
+              About Me
+            </button>
+          </a>
         </div>
         <div className="homeAboutImg flex justify-center md:w-1/2">
           <div className="relative w-full h-[300px] md:h-[400px] bg-gray-200 overflow-hidden">
@@ -78,9 +82,11 @@ export default function HomePage() {
             <p className="text-gray-600">
               We are working with various companies on massive projects. Contact us and we’ll discuss all the details.
             </p>
-            <span className="inline-block mt-3 text-blue-600 cursor-pointer flex items-center justify-center gap-1">
-              <HiOutlineArrowLongRight /> More Details
-            </span>
+            <a href="/services">
+              <span className="inline-block mt-3 text-blue-600 cursor-pointer flex items-center justify-center gap-1">
+                <HiOutlineArrowLongRight /> More Details
+              </span>
+            </a>
           </div>
           {/* Service 2 */}
           <div className="service bg-white rounded-md p-6 text-center">
@@ -89,9 +95,11 @@ export default function HomePage() {
             <p className="text-gray-600">
               Our authors can create technical or creative texts on any topic. Tell the story of your brand and sell goods with us.
             </p>
-            <span className="inline-block mt-3 text-blue-600 cursor-pointer flex items-center justify-center gap-1">
-              <HiOutlineArrowLongRight /> More Details
-            </span>
+            <a href="/services">
+              <span className="inline-block mt-3 text-blue-600 cursor-pointer flex items-center justify-center gap-1">
+                <HiOutlineArrowLongRight /> More Details
+              </span>
+            </a>
           </div>
           {/* Service 3 */}
           <div className="service bg-white rounded-md p-6 text-center">
@@ -100,9 +108,11 @@ export default function HomePage() {
             <p className="text-gray-600">
               Our team consists of enthusiastic professionals who’ll gladly share their knowledge with you.
             </p>
-            <span className="inline-block mt-3 text-blue-600 cursor-pointer flex items-center justify-center gap-1">
-              <HiOutlineArrowLongRight /> More Details
-            </span>
+            <a href="/services">
+              <span className="inline-block mt-3 text-blue-600 cursor-pointer flex items-center justify-center gap-1">
+                <HiOutlineArrowLongRight /> More Details
+              </span>
+            </a>
           </div>
         </div>
       </section>
@@ -129,9 +139,11 @@ export default function HomePage() {
           <p className="text-gray-600 mb-4">
             We are located in Big City which makes things easier. Visit our office and see the awesome creative team of young copywriters!
           </p>
-          <button className="wwaBtn px-6 py-3 bg-black text-white font-medium rounded-md hover:bg-gray-800 transition-colors inline-flex items-center gap-1">
-            Read More <HiOutlineArrowLongRight />
-          </button>
+          <a href="/about">
+            <button className="wwaBtn px-6 py-3 bg-black text-white font-medium rounded-md hover:bg-gray-800 transition-colors inline-flex items-center gap-1">
+              Read More <HiOutlineArrowLongRight />
+            </button>
+          </a>
         </div>
       </section>
 

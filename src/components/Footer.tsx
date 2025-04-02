@@ -11,10 +11,10 @@ export default function Footer() {
         {/* Office Column */}
         <div className="footerTopCol">
           <h4 className="font-semibold text-lg mb-4">Office</h4>
-          <p className="colItem">2700 Fire Mesa St. Las</p>
-          <p className="colItem">Vegas, NV 89128</p>
-          <p className="colItem">info@example.com</p>
-          <p className="colItem">+1 800 123 45 67</p>
+          <p className="colItem">2place</p>
+          <p className="colItem">Veijuhgfcfghjuik</p>
+          <p className="colItem">invbhgfc@wertg.vcpo</p>
+          <p className="colItem">+091419419419</p>
         </div>
 
         {/* Links Column */}
@@ -22,16 +22,19 @@ export default function Footer() {
           <h4 className="font-semibold text-lg mb-4">Links</h4>
           <ul className="space-y-2">
             <li>
-              <a href="#" className="colItem">Blog</a>
+              <a href="/portfolio" className="colItem">Portfolio</a>
             </li>
             <li>
-              <a href="#" className="colItem">About Us</a>
+              <a href="/services" className="colItem">Service</a>
             </li>
             <li>
-              <a href="#" className="colItem">Shop</a>
+              <a href="/blog" className="colItem">Blog</a>
             </li>
             <li>
-              <a href="#" className="colItem">Contacts</a>
+              <a href="/about" className="colItem">About Us</a>
+            </li>
+            <li>
+              <a href="/contact" className="colItem">Contacts</a>
             </li>
           </ul>
         </div>
