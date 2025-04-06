@@ -1,9 +1,9 @@
 // pages/news/index.jsx
 import React from "react";
 import Image from "next/image";
-import './page.css'
+import Link from "next/link";
+import './page.css';
 import { TfiLayoutLineSolid } from "react-icons/tfi";
-
 
 const newsPosts = [
   {
@@ -66,35 +66,35 @@ export default function NewsPage() {
       <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-8">
         {/* Posts Section */}
         <div className="lg:col-span-8">
-          {/* Updated grid layout: two posts per row on medium+ screens */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {newsPosts.map((post) => (
-              <a
-                href="#"
-                key={post.id}
-                className="text-black hover:underline font-medium"
-              >
-                <article className="bg-white rounded-md overflow-hidden">
-                  <div className="relative w-full aspect-[16/9]">
-                    <Image
-                      src={post.imageUrl}
-                      alt={post.title}
-                      layout="fill"
-                      objectFit="cover"
-                    />
-                  </div>
-                  <div className="py-6">
-                    <div className="text-sm text-gray-500 mb-2 flex gap-5">
-                    <p className="red">Blog</p> . <p className="">{post.date}</p>
-                    </div>
-                    <h2 className="text-xl font-semibold mb-2">
-                      {post.title}
-                    </h2>
-                    <p className="text-gray-700 mb-4">{post.excerpt}</p>
-                  </div>
-                </article>
-              </a>
-            ))}
+            {newsPosts.map((post) => {
+              const slug = post.id;
+              return (
+                <Link href={`/blog/${slug}`} key={post.id} legacyBehavior>
+                  <a className="text-black hover:underline font-medium">
+                    <article className="bg-white rounded-md overflow-hidden">
+                      <div className="relative w-full aspect-[16/9]">
+                        <Image
+                          src={post.imageUrl}
+                          alt={post.title}
+                          layout="fill"
+                          objectFit="cover"
+                        />
+                      </div>
+                      <div className="py-6">
+                        <div className="text-sm text-gray-500 mb-2 flex gap-5">
+                          <p className="red">Blog</p> . <p>{post.date}</p>
+                        </div>
+                        <h2 className="text-xl font-semibold mb-2">
+                          {post.title}
+                        </h2>
+                        <p className="text-gray-700 mb-4">{post.excerpt}</p>
+                      </div>
+                    </article>
+                  </a>
+                </Link>
+              );
+            })}
           </div>
         </div>
 
@@ -102,25 +102,28 @@ export default function NewsPage() {
         <aside className="lg:col-span-4 space-y-8">
           {/* Recent Posts */}
           <div className="p-6 rounded-md">
-            <TfiLayoutLineSolid className="red line"/>
+            <TfiLayoutLineSolid className="red line" />
             <h3 className="text-xl font-bold mb-7">Recent Posts</h3>
             <ul className="space-y-3">
-              {newsPosts.map((post) => (
-                <li key={post.id}>
-                  <a href="#" className="text-xl font-semi-bold">
-                    {post.title}
-                  </a>
+              {newsPosts.map((post) => {
+              const slug = post.id;
+              return (
+                  <li key={post.id}>
+                    <Link href={`/blog/${slug}`} legacyBehavior>
+                      <a className="text-xl font-semi-bold">{post.title}</a>
+                    </Link>
                     <div className="text-sm text-gray-500 mb-2 flex gap-5">
-                        <p className="red">Blog</p> . <p className="">{post.date}</p>
+                      <p className="red">Blog</p> . <p>{post.date}</p>
                     </div>
-                </li>
-              ))}
+                  </li>
+                );
+              })}
             </ul>
           </div>
 
           {/* Categories */}
           <div className="p-6 rounded-md">
-          <TfiLayoutLineSolid className="red line"/>
+            <TfiLayoutLineSolid className="red line" />
             <h3 className="text-xl font-bold mb-4">Categories</h3>
             <ul className="space-y-2">
               {categories.map((cat) => (
@@ -135,7 +138,7 @@ export default function NewsPage() {
 
           {/* Tags */}
           <div className="p-6 rounded-md">
-          <TfiLayoutLineSolid className="red line"/>
+            <TfiLayoutLineSolid className="red line" />
             <h3 className="text-xl font-bold mb-4">Tags</h3>
             <div className="flex flex-wrap gap-2">
               {tags.map((tag, index) => (

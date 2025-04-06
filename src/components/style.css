@@ -56,5 +56,9 @@
     .footer {
       padding: 5rem 10rem;
     }
+    .navLink {
+      color: #000;       /* black for desktop */
+      font-size: 1.5rem;   /* keep same size, or bump to 1.125rem if you like */
+    }
   }
   

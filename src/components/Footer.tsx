@@ -1,5 +1,5 @@
 "use client";
-// import Link from "next/link";
+import Link from "next/link";
 import { LiaTelegramPlane } from "react-icons/lia";
 import { FaFacebookF, FaXTwitter, FaBehance, FaDribbble } from "react-icons/fa6";
 
@@ -22,19 +22,19 @@ export default function Footer() {
           <h4 className="font-semibold text-lg mb-4">Links</h4>
           <ul className="space-y-2">
             <li>
-              <a href="/portfolio" className="colItem">Portfolio</a>
+              <Link href="/portfolio" className="colItem">Portfolio</Link>
             </li>
             <li>
-              <a href="/services" className="colItem">Service</a>
+              <Link href="/services" className="colItem">Service</Link>
             </li>
             <li>
-              <a href="/blog" className="colItem">Blog</a>
+              <Link href="/blog" className="colItem">Blog</Link>
             </li>
             <li>
-              <a href="/about" className="colItem">About Us</a>
+              <Link href="/about" className="colItem">About Us</Link>
             </li>
             <li>
-              <a href="/contact" className="colItem">Contacts</a>
+              <Link href="/contact" className="colItem">Contacts</Link>
             </li>
           </ul>
         </div>
