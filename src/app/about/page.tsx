@@ -3,6 +3,8 @@
 import React, { FormEvent } from 'react';
 import Image from 'next/image';
 import './page.css'
+import services from '@/components/content.json';
+
 
   
 export default function AboutUsPage() {
@@ -24,26 +26,37 @@ export default function AboutUsPage() {
 
       {/* Hero / Intro Section */}
       <section className="w-full max-w-6xl px-4 py-16">
-        <div className="flex flex-col md:flex-row items-center gap-8">
+          <h1 className="text-5xl font-bold mb-4 text-black text-center">{services.aboutMe.name}</h1>
+          <div className="flex flex-col md:flex-row items-center gap-8">
           <div className="w-full justify-around flex flex-col aspect-[1/1] p-10">
-            <h1 className="text-5xl font-bold mb-4 text-black">
-              I can give your business a new creative start right away!
-            </h1>
-            <p className="text-gray-600">
-              Donec hendrerit diam. Pellentesque egestas faucibus arcu nisl aliquam malesuada.
-              Donec suscipit posuere ligula. Vivamus tristique, odio non efficitur malesuada, purus
-              quam dictum velit, vitae hendrerit ex magna et.
-            </p>
+            <p className="text-black text-3xl font-bold pb-4">Skills and Expertise:</p>
+            <ul className="text-gray-600">
+            {services.aboutMe.skillsAndExpertise.map((svc, index) => (
+              <li key={index} className="pb-1">
+                {svc}
+              </li>
+            ))}
+            </ul>
           </div>
           <div className="group relative w-full aspect-[1/1] bg-gray-200 overflow-hidden">
-                <Image
-                    src='/images/ph.png'
-                    alt="Mr Ifeanyi"
-                    layout="fill"
-                    objectFit="cover"
-                    className="transition-transform duration-300 ease-in-out group-hover:scale-105"
-                />
+            <Image
+              src='/images/ph.png'
+              alt="Mr Ifeanyi"
+              layout="fill"
+              objectFit="cover"
+              className="transition-transform duration-300 ease-in-out group-hover:scale-105"
+            />
             </div>
+        </div>
+        <div className="flex flex-col md:flex-row items-center gap-8">
+          <div className="w-full flex flex-col p-10">
+            <h1 className="text-3xl font-bold mb-6 text-black">
+              {services.aboutMe.subtitle}
+            </h1>
+            <p className="text-gray-600">
+              {services.aboutMe.bio}
+            </p>
+          </div>
         </div>
       </section>
 

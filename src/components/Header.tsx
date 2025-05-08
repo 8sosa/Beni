@@ -8,6 +8,7 @@ import { HiOutlineMenuAlt4, HiOutlineX } from "react-icons/hi";
 import { CiSearch } from "react-icons/ci";
 import { BsBag } from "react-icons/bs";
 import "./style.css";
+import Content from "./content.json"
 
 export default function Header() {
   const [portfolioOpen, setPortfolioOpen] = useState(false);
@@ -147,13 +148,13 @@ export default function Header() {
 
               {servicesOpen && (
                 <div className="absolute left-0 mt-2 w-48 bg-white rounded shadow-lg z-50">
-                  {["Web Development", "UI/UX Design", "Marketing"].map((label) => (
+                  {Content.services.slice(0, 9).map((service, index) => (
                     <button
-                      key={label}
+                      key={index}
                       onClick={() => handleNavigation("/services")}
                       className="block w-full px-4 py-2 text-sm text-black hover:bg-gray-100"
                     >
-                      {label}
+                      {service.title}
                     </button>
                   ))}
                 </div>

@@ -2,7 +2,7 @@
 .homeHero {
     background-color: #8bb6bc;
     /* Desktop height; for mobile, let content define height */
-    height: 80vh;
+    height: 90vh;
   }
   
   .homeHeroText {
@@ -30,7 +30,9 @@
     height: 80vh;
     padding: 10rem;
   }
-  
+  .creamBg {
+    background-color: #f9f5f3;
+  }
   .homeAboutText {
     color: black;
     width: 50%;
